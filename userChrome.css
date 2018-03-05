@@ -1,0 +1,58 @@
+/* For Running Scripts */
+
+#main-window:not(#f) toolbarbutton#alltabs-button {
+  -moz-binding: url(userChrome.xml#js) !important;
+}
+
+/* nav-bar padding right when toolbar-menubar is hidden */
+
+#main-window:not(#f) #toolbar-menubar[autohide="false"] + #nav-bar {
+  padding-right: 0 !important;
+}
+#main-window:not(#f) #toolbar-menubar[autohide="true"] + #nav-bar {
+  padding-right: 150px !important;
+}
+
+/* Tabs Multi Rows */
+
+#main-window:not(#f) #TabsToolbar[movingtab] {
+  padding-bottom: 0 !important;
+}
+#main-window:not(#f) #TabsToolbar[movingtab] > .tabbrowser-tabs {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+#main-window:not(#f) .tabbrowser-tab:not([pinned]) {
+  width: auto !important;
+}
+#main-window:not(#f) .tabbrowser-tab[pinned] {
+  width: 94px !important;
+}
+#main-window:not(#f) #titlebar-buttonbox {
+  display: block !important;
+}
+.tabbrowser-arrowscrollbox scrollbox > box {
+  display: block !important;
+}
+#main-window:not(#f) .tabbrowser-tab {
+  -moz-box-sizing: border-box !important;
+  min-height: 33px !important;
+  vertical-align: top !important;
+}
+#main-window:not(#f) #titlebar-buttonbox {
+  vertical-align: top !important;
+}
+#main-window:not(#f) .tabbrowser-arrowscrollbox scrollbox {
+  overflow: visible !important;
+}
+#main-window:not(#f) .tab-label-container[textoverflow]:not([pinned]) {
+  mask-image: unset !important;
+}
+#main-window:not(#f) .scrollbutton-up,
+#main-window:not(#f) .scrollbutton-down {
+  display: none !important;
+}
+#main-window:not(#f) .tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator:not([collapsed]),
+#main-window:not(#f) .tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator:not([collapsed]) {
+  background-image: none !important;
+}
